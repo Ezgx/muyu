@@ -81,21 +81,21 @@ function getNum() {
 }
 // 总功德
 
-// 功德+1
+// 功德-1
 
 function addNum() {
   showtips();
   setTimeout(hiddenTips, 600);
-  // 今日功德+1
+  // 今日功德-1
   todayNum = +todayNum + 1;
   today.innerHTML = todayNum;
   localStorage.setItem("todayNum", todayNum);
-  // 总功德+1
+  // 总功德-1
   allNum = +allNum + 1;
   all.innerHTML = allNum;
   localStorage.setItem("allNum", allNum);
 }
-// 控制显示功德+1的动画
+// 控制显示功德-1的动画
 var tips = document.querySelector("#tips");
 function showtips() {
   tips.style.visibility = "visible";
