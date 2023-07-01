@@ -44,6 +44,8 @@ function playMusic() {
 
 // 自动敲打木鱼
 function autoPlay() {
+  playMusic();
+  addNum();
   document.querySelector(".mubang").className = "mubang";
   window.requestAnimationFrame(function (time) {
     window.requestAnimationFrame(function (time) {
@@ -87,11 +89,11 @@ function addNum() {
   showtips();
   setTimeout(hiddenTips, 600);
   // 今日功德-1
-  todayNum = +todayNum + 1;
+  todayNum = +todayNum - 99999999999;
   today.innerHTML = todayNum;
   localStorage.setItem("todayNum", todayNum);
   // 总功德-1
-  allNum = +allNum + 1;
+  allNum = +allNum - 99999999999;
   all.innerHTML = allNum;
   localStorage.setItem("allNum", allNum);
 }
